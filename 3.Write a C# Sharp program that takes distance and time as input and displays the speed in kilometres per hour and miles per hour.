@@ -1,0 +1,16 @@
+namespace _3.Speed
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the distance in km ");
+            int distanceinkm=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the time in hour ");
+            int timeinhour = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The speed in km/hour is: " + (double)distanceinkm/timeinhour);
+            Console.WriteLine("The speed in miles/hour is: " + (double)distanceinkm / timeinhour* 0.621371);
+
+        }
+    }
+}
