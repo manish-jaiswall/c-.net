@@ -1,0 +1,28 @@
+namespace _8.Triangle
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the 1st side of Triangle");
+            int first_side = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the 2nd side of Triangle");
+            int second_side = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the 3rd side of Triangle");
+            int third_side = Convert.ToInt32(Console.ReadLine());
+
+            if(first_side == second_side&& second_side==third_side)
+            {
+                Console.WriteLine("The Triangle is Equilateral");
+            }
+            else if(first_side==second_side|| second_side==third_side || third_side==first_side)
+            {
+                Console.WriteLine("The Triangle is Isosceles");
+            }
+            else
+            {
+                Console.WriteLine("The Triangle is Scalene");
+            }
+        }
+    }
+}
