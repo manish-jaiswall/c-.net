@@ -1,0 +1,30 @@
+namespace _7.Subjects
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Marks in physics");
+            int physics=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Marks in Chemistry");
+            int chemistry=Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter marks in Maths");
+            int maths=Convert.ToInt32(Console.ReadLine());
+
+            if(maths>=65&& physics>=55&&chemistry>=50 )
+            {
+                if((physics+chemistry+maths)>=180||(physics+maths)>=140)
+                {
+                    Console.WriteLine("Eligible");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Not Eligible");
+               
+            }
+
+        }
+    }
+}
