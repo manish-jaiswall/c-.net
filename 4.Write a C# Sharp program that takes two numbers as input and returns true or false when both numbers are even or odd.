@@ -1,0 +1,24 @@
+namespace _4.BothNumEvenOrOdd
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the 1st Num: ");
+            int num1=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the 2nd Num: ");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            bool check =(num1%2==0)&&(num2%2==0)?true:false;
+
+            if(check)
+            {
+                Console.WriteLine("Both numbers are even");
+            }
+            else
+            {
+                Console.WriteLine("Both are not even");
+            }
+        }
+    }
+}
