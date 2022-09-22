@@ -1,0 +1,60 @@
+namespace _14.LongestSubstring
+{
+    internal class Program
+    {
+       public static int Longest(string s)
+        {
+            if (s.Length == 0) return 0;
+
+            int i = 0;
+            int j = 0;
+            int size = 0;
+            Dictionary<char, int> map = new Dictionary<char, int>();
+
+            while (j < s.Length)
+            {
+                char key=s[j];
+                if (!map.ContainsKey(key))
+                {
+                    map[key] = 0;
+                }
+                map[s[j]]++;
+                if (map.Count < j - i + 1)
+                {
+                    while (map.Count < j - i + 1)
+                    {
+                        char k = s[i];
+                        if (map.ContainsKey(k))
+                        {
+                            map[k]--;
+                        }
+
+
+                        if (map[s[i]] == 0)
+                        {
+                            map.Remove(s[i]);
+                        }
+
+                        i++;
+                    }
+                }
+                else if (map.Count == j - i + 1)
+                {
+                    size = Math.Max(size, j - i + 1);
+                }
+                j++;
+
+            }
+            return size;
+
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the string");
+            string s = Console.ReadLine();
+
+            int a = Longest(s);
+            Console.WriteLine("The Longest Substring without repeating char: " + a);
+        }
+    }
+}
