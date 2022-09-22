@@ -1,0 +1,13 @@
+namespace _2.AreaOfCircle
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the Radius");
+            int radius =Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Area of Circle: "+ (22/7)*radius*radius);
+            Console.WriteLine("Perimeter of Circle: "+ 2*(22/7)*radius);
+        }
+    }
+}
