@@ -1,0 +1,43 @@
+namespace _11.OddOrEvenInSeperateWays
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the size of array");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] arr1 = new int[n];
+            int[] even = new int[n];
+            int[] odd = new int[n];
+
+            int e = 0, o = 0;
+            
+            for(int i=0;i<n;i++)
+            {
+                arr1[i] = Convert.ToInt32(Console.ReadLine());
+
+                if (arr1[i]%2==0)
+                {
+                    even[e++] = arr1[i];
+                }
+                else
+                {
+                    odd[o++] = arr1[i];
+                }
+
+            }
+            Console.WriteLine("The even array elements are");
+            for(int i=0;i<even.Length;i++)
+            {
+                Console.Write(even[i]+ " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("The odd array elements are");
+            for (int i = 0; i < odd.Length; i++)
+            {
+                Console.Write(odd[i]+ " ");
+            }
+
+        }
+    }
+}
