@@ -1,0 +1,31 @@
+namespace _9.CopyArrayFromOneToAnother
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter the size of Array");
+            int n=Convert.ToInt32(Console.ReadLine());
+            int[] arr1 = new int[n];
+            int[] arr2 = new int[n];
+            Console.WriteLine("Enter the Array Elements");
+
+            for (int i=0;i<n;i++)
+            {
+                arr1[i] = Convert.ToInt32(Console.ReadLine());
+                arr2[i] = arr1[i];
+            }
+            Console.WriteLine("The elements stored in the arr1 are: ");
+            for(int i=0;i<n;i++)
+            {
+                Console.WriteLine(arr1[i]);
+            }
+            Console.WriteLine("The elements stored in the arr2 are: ");
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine(arr2[i]);
+            }
+        }
+    }
+}
